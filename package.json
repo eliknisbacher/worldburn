@@ -1,0 +1,17 @@
+{
+  "name": "worldburning",
+  "module": "index.js",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@nastyox/rando.js": "^2.0.6",
+    "compromise": "^14.14.5",
+    "stopwords": "^0.0.9"
+  }
+}
