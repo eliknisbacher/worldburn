@@ -48,7 +48,10 @@ function noun() {
 
 var thoughts = ['and did u know I brushed my teeth today', 'and did you know the patriots lost', 'and did you know the sky is turning red', 'did you know', 'and did you know that god isn\'t dead', 'and where is my phone', 'and where did it go', '????', 'and what are your thoughts on genocide', 'and are trans people real', 'and what about antisemitism?', 'and is any of this new', 'and what is knowledge anyway', 'and is this a fungal infection', 'and what\'s your ideal way to die']
 
-var preHtml =`emma@emmas-MacBook-Air worldburning %
+
+
+createServer((req,res)=>{
+    var preHtml =`emma@emmas-MacBook-Air worldburning %
 
   IS IT POETRY
 
@@ -71,10 +74,10 @@ ${noun() + ' ' + verb() + ' ' + noun() + '--&'}
 
       ${rando(thoughts).value}
       
-emma@emmas-MacBook-Air worldburning %`
+`
 
-var html = `!<DOCTYPE html>
-<html>
+    var html = `<!DOCTYPE html>
+<html style="filter:invert(100%)">
     <head>
         <title>by emma kn</title>
     </head>
@@ -82,8 +85,6 @@ var html = `!<DOCTYPE html>
         <pre>${preHtml}</pre>
     </body>
 </html>`
-
-createServer((req,res)=>{
     res.writeHead(200, {'Content-Type':'text/html'})
     res.end(html)
 }).listen(1080)
